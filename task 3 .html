@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ice Cream Shop</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#fff5f8;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#ff9eb5;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    color:white;
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover + Click effect (CSS only) */
+nav ul li:hover{
+    background:#ff5f8a;
+    transform:scale(1.1);
+}
+
+nav ul li:active{
+    background:#ff2f6a;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h1{
+    color:#ff4f7a;
+    font-size:40px;
+}
+
+.hero p{
+    color:#555;
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* Ice Cream Section */
+.icecream{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-top:10px;
+    color:#ff4f7a;
+}
+
+/* Footer */
+footer{
+    background:#ff9eb5;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🍦 Ice Cream</div>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Orders</li>
+            <li>Login</li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Delicious Ice Cream</h1>
+    <p>Fresh • Sweet • Chilled</p>
+</section>
+
+<section class="icecream">
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/b0/56/a9/b056a988e6338e9394c3c8f8581ec83f.jpg">
+        <h3>Vanilla</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/ed/5d/da/ed5dda843e94f6353c6c2974ab5f48cb.jpg">
+        <h3>Chocolate</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/1200x/f6/df/9d/f6df9dffda8fce86115affd6085cee60.jpg">
+        <h3>Strawberry</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pinimg.com/736x/6b/a6/88/6ba68896ed6a2c06e129c782a302efdd.jpg">
+        <h3>Mixed</h3>
+    </div>
+</section>
+
+<footer>
+    © 2026 Ice Cream Shop
+</footer>
+
+</body>
+</html>

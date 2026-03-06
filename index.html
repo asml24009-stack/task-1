@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amusement Park Booking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff4e50;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff4e50, #f9d423);
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎢 Park Booking</h2>
+    
+    <input type="text" id="name" placeholder="Enter Your Name" required>
+    
+    <input type="number" id="tickets" placeholder="Number of Tickets" required>
+    
+    <select id="ride">
+        <option value="">Select Ride</option>
+        <option>Roller Coaster</option>
+        <option>Ferris Wheel</option>
+        <option>Water Ride</option>
+        <option>Haunted House</option>
+    </select>
+    
+    <button onclick="bookNow()">Book Now</button>
+    
+    <div class="message" id="message"></div>
+</div>
+
+<script>
+    function bookNow() {
+        var name = document.getElementById("name").value;
+        var tickets = document.getElementById("tickets").value;
+        var ride = document.getElementById("ride").value;
+
+        if(name === "" || tickets === "" || ride === "") {
+            document.getElementById("message").style.color = "red";
+            document.getElementById("message").innerHTML = "Please fill all details!";
+        } else {
+            document.getElementById("message").style.color = "green";
+            document.getElementById("message").innerHTML =
+                "Booking Confirmed for " + name + " 🎉";
+        }
+    }
+</script>
+
+</body>
+</html>

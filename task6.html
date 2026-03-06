@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mouse & Window Events Project</title>
+
+<style>
+body {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ff5e62;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9966;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Mouse & Window Events</h1>
+
+<div class="container">
+
+<div class="card">
+<h3>onclick</h3>
+<button onclick="alert('Button Clicked!')">Click Me</button>
+</div>
+
+<div class="card">
+<h3>onmouseover / onmouseout</h3>
+<p onmouseover="this.style.backgroundColor='#ff5e62'; this.style.color='white';"
+onmouseout="this.style.backgroundColor='transparent'; this.style.color='black';"
+style="padding:10px; border-radius:6px; cursor:pointer;">
+Hover Over This Text
+</p>
+</div>
+
+<div class="card">
+<h3>window.print</h3>
+<button onclick="window.print()">Print Page</button>
+</div>
+
+<div class="card">
+<h3>oncontextmenu</h3>
+<p oncontextmenu="alert('Right Click Disabled!'); return false;"
+style="cursor:pointer;">
+Try Right Clicking Here
+</p>
+</div>
+
+</div>
+
+<script>
+window.onload = function() {
+    alert("Page Loaded Successfully!");
+};
+
+window.onbeforeprint = function() {
+    alert("Preparing to Print...");
+};
+
+window.onafterprint = function() {
+    alert("Printing Completed!");
+};
+
+window.onhashchange = function() {
+    alert("Hash Changed: " + location.hash);
+};
+
+window.ononline = function() {
+    alert("You are back online!");
+};
+
+window.onoffline = function() {
+    alert("You are offline!");
+};
+</script>
+
+</body>
+</html>
